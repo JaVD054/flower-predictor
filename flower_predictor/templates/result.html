@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Pookkalam to Poovu</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/restyle.css')}}">
+  </head>
+  <body>
+    
+        <!-- <h4>File Uploader</h4> -->
+        
+        <!-- {{ result.result }} -->
+        
+        {% if result.result == 1 %}
+        <!-- <div>File Uploaded</div> -->
+        
+        <div>
+          <img src="{{filepath}}" class="imag" />
+        </div>
+  		{% else %}
+    		<div>Error : {{ result.error }}</div>
+  		{% endif %}
+		 
+  </body>
+  </html>
