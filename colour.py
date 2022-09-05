@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 #Read Image
 
-img = cv2.imread('default3.jpg')
+img = cv2.imread('default.jpg')
 
 # Convert from BGR to RGB
 

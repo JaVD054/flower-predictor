@@ -1,0 +1,35 @@
+body{
+    background-color: rgba(182, 180, 47, 0.858);
+
+}
+h2{
+    margin-top: 0;
+    margin-left: 455px;
+    font-family: cursive;
+    font-weight: lighter;
+    font-size: 18px;
+}
+.upload-file{
+    margin-top: 20px;
+    margin-left: 650px;
+}
+.image{
+    width: 470px;
+    height: 290px;
+    margin-left: 520px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container .submit-btn{
+    width: 100px;
+    height: 40px;
+    margin-left: 700px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 100, 0, 0.804);
+    color: antiquewhite;
+    font-size: 15px;
+    font-family: Times New Roman;
+}
