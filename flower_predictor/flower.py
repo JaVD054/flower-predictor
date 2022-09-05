@@ -6,7 +6,7 @@ class Flower(db.Model):
     colour = db.Column(db.String(100),nullable= False)
 
     def __repr__(self) -> str:
-        return "{self.name}"
+        return f"{self.name}"
 
 def search_flowers_by_colour(colour):
     return Flower.query.filter_by(colour=colour)
