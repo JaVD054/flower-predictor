@@ -1,5 +1,6 @@
 from flower_predictor import app
 from flower_predictor.colour import show_colours
+from flower_predictor.flower import Flower,search_flowers_by_colour
 from flask import render_template,request
 import os
 
@@ -44,17 +45,22 @@ def upload_file():
         filepath = os.path.join(app.config['UPLOAD_FOLDER'],filename )
         file.save(filepath)
 
-        co = show_colours(filepath)
-        print(co)
+        colours = show_colours(filepath)
+
+        flowers = {}
+
+        for colour in colours:
+            f = search_flowers_by_colour(colour)
+            flowers[colour] = [{'name':flower.name,'image':flower.image} for flower in f ]
 
         print('filepath : ', filepath)
         
         result = {
             'result' : 1,
             'error' : '0',
-            'image_location' : filepath
+            'image_location' : filepath[17:]
         }
-        return render_template('result.html', result = result, colours=co)
+        return render_template('result.html', result = result, colours=colours,flowers=flowers)
     
     #return content
     return render_template('result.html', result = {

@@ -21,6 +21,9 @@
   		{% endif %}
       {% for colour in colours %}
       <h1>{{ colour }}</h1>
+        {% for flower in flowers[colour] %}
+          <div>{{ flower.name }}</div>
+        {% endfor %}
       {% endfor %}
 		 
   </body>
