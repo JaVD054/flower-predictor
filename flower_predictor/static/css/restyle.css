@@ -13,9 +13,7 @@ body{
 
 .container{
     width: 500px;
-    height: 300px;
-    
-    
+    height: 300px; 
 }
 
 .container h4{
@@ -27,26 +25,25 @@ body{
     width: 100%;
     height: auto;
 }
+
 #arrow{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .imag{
     width: 160px;
-    height: 80px;
-    
+    height: 80px;  
 }
 
 .res{
     background-color: rgba(199, 193, 205, 0.715);
     border-style: inset;
-    
     border-radius: 20px;
 }
 
-table {
-    
+table { 
     text-align: left;
     font-family: sans-serif;
     text-transform: capitalize;
@@ -61,7 +58,7 @@ table {
     background-color: black;
     border-radius: 50%;
     display: inline-block;  
-  }
+}
 
 .dot h3{
     font-size: medium;
@@ -73,6 +70,7 @@ table {
     cursor: pointer;
     position:relative; 
 }
+
 .hover_img span {
     position:absolute; 
     display:none; 
@@ -84,6 +82,7 @@ table {
     box-sizing: 10px;
     z-index:  2; 
 }
+
 .hover_img p:hover{
     color: gray;
 }
