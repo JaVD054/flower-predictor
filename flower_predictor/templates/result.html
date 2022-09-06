@@ -20,30 +20,40 @@
           {% else %}
     		  <div>Error : {{ result.error }}</div>
   		    {% endif %}
-          <table style="width:500px">
 
-            <tr bgcolor="darkgrey">
-              <th>
-                <h3>Colour</h3>
-              </th>
-              <th>
-                <h3>Poovu</h3>
-              </th>
-            </tr>
-            {% for colour in colours %}
-            <tr bgcolor="antiquewhite">
-              <td>
-                <h3>{{colour}}</h3>
-              </td>
-              <td>
-              {% for flower in flowers[colour] %}
-              <h3>{{flower.name}}</h3>
+          <img src="{{url_for('static',filename = 'arrow.png')}}" class="imag"/>
+
+
+          <div class="res">
+            <table style="width:360px">
+
+              <!-- <tr bgcolor="darkgrey">
+                <th>
+                  <h3>Colour</h3>
+                </th>
+                <th>
+                  <h3>Poovu</h3>
+                </th>
+              </tr> -->
+              {% for colour in colours %}
+              <tr>
+                <td style="width: 150px; height: 40px;">
+                  <span class="dot" style="background-color:{{colour}}"><h3>{{colour}}</h3></span>
+                  
+                </td>
+                <td>
+                {% for flower in flowers[colour] %}
+                
+                <a href="#" class="hover_img">{{flower.name}}<span><img src={{flower.image}} alt="image" height="100" /></span></a>
+             
+                {% endfor %}
+                </td>
+                
+              </tr>
               {% endfor %}
-              </td>
-              
-            </tr>
-            {% endfor %}
-          </table>
+            </table>
+          </div>
+          
           
         </div>
       
