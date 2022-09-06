@@ -44,7 +44,9 @@
                 <td>
                 {% for flower in flowers[colour] %}
                 
-                <a href="#" class="hover_img">{{flower.name}}<span><img src={{flower.image}} alt="image" height="100" /></span></a>
+                <div class="hover_img">
+                  <a href="#">{{flower.name}}<span><img src={{flower.image}} alt="image" height="100" /></span></a>
+                </div>
              
                 {% endfor %}
                 </td>
