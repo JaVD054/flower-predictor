@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(182, 180, 47, 0.858);
+    background-color: whitesmoke;
 }
 .new{
     display: flex;
@@ -28,3 +28,12 @@ table {
     font-family: Roboto;
     text-transform: capitalize;
 }
+
+/* .hide {
+    display: none;
+  }
+  
+.myDIV:hover + .hide {
+    display: block;
+    color: red;
+  } */
