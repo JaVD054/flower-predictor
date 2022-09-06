@@ -1,46 +1,55 @@
 body{
-
-    background-color: rgba(250, 223, 227, 0.888)
+    background-color: rgba(250, 223, 227, 0.888);
+    padding: 6em;
+    padding-bottom: 1rem;
 }
+
 .new{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
 }
+
 .container{
     width: 500px;
     height: 300px;
     
-    margin-top: 60px;
-    margin-left: 60px;
+    
 }
+
 .container h4{
     font-size: 20px;
     color: black;
 }
+
 .container img{
     width: 100%;
     height: auto;
 }
+#arrow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .imag{
     width: 160px;
     height: 80px;
-    margin-top: 340px;
-    margin-left: 120px;
+    
 }
+
 .res{
     background-color: rgba(199, 193, 205, 0.715);
     border-style: inset;
-    margin-left: 140px;
-    margin-top: 200px;
+    
     border-radius: 20px;
 }
+
 table {
     
     text-align: left;
     font-family: sans-serif;
     text-transform: capitalize;
-<<<<<<< HEAD
     padding-left: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -51,29 +60,34 @@ table {
     width: 13px;
     background-color: black;
     border-radius: 50%;
-    display: inline-block;
-    
+    display: inline-block;  
   }
+
 .dot h3{
     font-size: medium;
     margin-left: 40px;
     margin-top: 1px;
 }
-/* .hover_img{
-    margin
-} */
-.hover_img a { position:relative; }
-.hover_img a span { position:absolute; display:none; z-index:99; }
-.hover_img a:hover span { display:block; }
-=======
+
+.hover_img p { 
+    cursor: pointer;
+    position:relative; 
+}
+.hover_img span {
+    position:absolute; 
+    display:none; 
 }
 
-/* .hide {
-    display: none;
-  }
-  
-.myDIV:hover + .hide {
-    display: block;
-    color: red;
-  } */
->>>>>>> 1eae2a2f7a9df63baef22bc71bc6170f5ddbe473
+.hover_img p:hover span {
+    display:block; 
+    color: gray;
+    box-sizing: 10px;
+    z-index:  2; 
+}
+.hover_img p:hover{
+    color: gray;
+}
+
+#image{
+    border-radius: 10px;
+}

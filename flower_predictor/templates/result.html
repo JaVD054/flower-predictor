@@ -17,15 +17,12 @@
           <img src="{{ result.image_location }}" />
           </div>
   		    
-          {% else %}
-    		  <div>Error : {{ result.error }}</div>
-  		    {% endif %}
 
-          <img src="{{url_for('static',filename = 'arrow.png')}}" class="imag"/>
+          <div id="arrow"><img src="{{url_for('static',filename = 'arrow.png')}}" class="imag"/></div>
 
 
           <div class="res">
-            <table style="width:360px">
+            <table style="width:360px" id="table">
 
               <!-- <tr bgcolor="darkgrey">
                 <th>
@@ -45,7 +42,7 @@
                 {% for flower in flowers[colour] %}
                 
                 <div class="hover_img">
-                  <a href="#">{{flower.name}}<span><img src={{flower.image}} alt="image" height="100" /></span></a>
+                  <p>{{flower.name}}<span><img src={{flower.image}} alt="image" height="100" id="image"/></span></p>
                 </div>
              
                 {% endfor %}
@@ -55,6 +52,10 @@
               {% endfor %}
             </table>
           </div>
+
+          {% else %}
+    		  <div>Error : {{ result.error }}</div>
+  		    {% endif %}
           
           
         </div>
