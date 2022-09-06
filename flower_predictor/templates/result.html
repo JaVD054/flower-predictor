@@ -14,11 +14,17 @@
         <!-- <div>File Uploaded</div> -->
         
         <div>
-          <img src="{{filepath}}" class="imag" />
+          <img src="{{ result.image_location }}" class="imag" />
         </div>
   		{% else %}
     		<div>Error : {{ result.error }}</div>
   		{% endif %}
+      {% for colour in colours %}
+      <h1>{{ colour }}</h1>
+        {% for flower in flowers[colour] %}
+          <div>{{ flower.name }}</div>
+        {% endfor %}
+      {% endfor %}
 		 
   </body>
   </html>

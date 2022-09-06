@@ -27,8 +27,8 @@ def kmeans_color_quantization(image, clusters=8, rounds=1):
     return res.reshape((image.shape))
 
 #Read Image
-def show_colours():
-    img = cv2.imread('default3.jpg')
+def show_colours(path):
+    img = cv2.imread(path)
     original = img.copy()
     kmeans = kmeans_color_quantization(img, clusters=4)
 
@@ -135,9 +135,6 @@ def show_colours():
 
     print(colors)
 
-
+    return colors
     plt.imshow(img)
     plt.show()
-
-show_colours()
-

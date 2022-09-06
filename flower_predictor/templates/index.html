@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/style.css')}}">
+    {% block head %}{% endblock %} 
+</head>
+
+<body>
+    <section class="form-box">
+        <image src="{{url_for('static',filename = 'background.png')}}" class="image">
+         <h2>Upload design of your pookkalam and we'll tell you what flowers you'll need</h2>
+    <div >
+        <form action="upload_file" class="form-box"  method="POST" enctype=multipart/form-data>
+            <input type="file" name="file" required>
+            <input type="submit" value="Upload File" class="submit-btn">
+        </form>
+    </div>
+   
+    </section>
+
+</body>
+</html>
