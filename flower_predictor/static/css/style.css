@@ -1,12 +1,19 @@
 body{
-    background-color: rgba(182, 180, 47, 0.858)!important;
-
+    background-color: rgb(0, 0, 0)!important;
+    padding: 3rem;
+    padding-top: 6rem;
+    
 }
 h2{
     margin-top: 0;
     font-family: cursive;
     font-weight: lighter;
     font-size: 18px;
+    color: white;
+}
+
+.fm{
+    margin-top: 1rem;
 }
 
 .image{
@@ -23,12 +30,15 @@ h2{
     height: 40px;
     margin-top: 20px;
     border-radius: 10px;
-    border-color: rgba(21, 117, 21, 0.804);
-    background-color: rgba(0, 100, 0, 0.804);
+    border-color: rgba(178, 178, 178, 0.304);
+    background-color: rgba(0, 0, 0, 0.804);
     color: white;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
 }
 .submit-btn:hover{
-    background-color: rgba(21, 117, 21, 0.804);
+    background-color: rgba(41, 41, 41, 0.804);
+}
+.input{
+    color: white;
 }
