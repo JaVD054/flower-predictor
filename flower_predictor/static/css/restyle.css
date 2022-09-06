@@ -1,5 +1,9 @@
 body{
+<<<<<<< HEAD
     background-color: rgba(250, 223, 227, 0.888)
+=======
+    background-color: whitesmoke;
+>>>>>>> 1eae2a2f7a9df63baef22bc71bc6170f5ddbe473
 }
 .new{
     display: flex;
@@ -39,6 +43,7 @@ table {
     text-align: left;
     font-family: sans-serif;
     text-transform: capitalize;
+<<<<<<< HEAD
     padding-left: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -63,3 +68,15 @@ table {
 .hover_img a { position:relative; }
 .hover_img a span { position:absolute; display:none; z-index:99; }
 .hover_img a:hover span { display:block; }
+=======
+}
+
+/* .hide {
+    display: none;
+  }
+  
+.myDIV:hover + .hide {
+    display: block;
+    color: red;
+  } */
+>>>>>>> 1eae2a2f7a9df63baef22bc71bc6170f5ddbe473
