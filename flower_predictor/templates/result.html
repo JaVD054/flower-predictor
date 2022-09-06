@@ -5,26 +5,53 @@
     <link rel="stylesheet" href="{{url_for('static',filename = 'css/restyle.css')}}">
   </head>
   <body>
-    
-        <!-- <h4>File Uploader</h4> -->
+
+        <div class="new">
+
+
+          {% if result.result == 1 %}
+          
         
-        <!-- {{ result.result }} -->
-        
-        {% if result.result == 1 %}
-        <!-- <div>File Uploaded</div> -->
-        
-        <div>
-          <img src="{{ result.image_location }}" class="imag" />
+          <div class="container">
+          <h4>Your Pookkalam :</h4>
+          <img src="{{ result.image_location }}" />
+          </div>
+  		    
+          {% else %}
+    		  <div>Error : {{ result.error }}</div>
+  		    {% endif %}
+          <table style="width:500px">
+
+            <tr bgcolor="darkgrey">
+              <th>
+                <h3>Colour</h3>
+              </th>
+              <th>
+                <h3>Poovu</h3>
+              </th>
+            </tr>
+
+            <tr bgcolor="antiquewhite">
+              <td>
+              {% for colour in colours %}
+              <h3>{{colour}}</h3>
+              <!-- <hr color="black" size="0.001"> -->
+              {% endfor %}
+              </td>
+
+              <td>
+              {% for colour in colours %}
+              {% for flower in flowers[colour] %}
+              <h3>{{flower.name}}</h3>
+              <!-- Flower image -->
+              <!-- <hr color="black" size="0.001"> -->
+              {% endfor %}
+              {% endfor %}
+              </td>
+            </tr>
+          </table>
+          
         </div>
-  		{% else %}
-    		<div>Error : {{ result.error }}</div>
-  		{% endif %}
-      {% for colour in colours %}
-      <h1>{{ colour }}</h1>
-        {% for flower in flowers[colour] %}
-          <div>{{ flower.name }}</div>
-        {% endfor %}
-      {% endfor %}
-		 
-  </body>
-  </html>
+      
+	</body>
+</html>
