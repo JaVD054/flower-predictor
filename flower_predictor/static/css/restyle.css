@@ -21,11 +21,7 @@ body{
     width: 100%;
     height: auto;
 }
-table, th, td {
-    border:1px solid  rgba(182, 180, 47, 0.858);
-    border-collapse: collapse;
-    border-radius: 14px;
-    border-width: 2.6px;
+table {
     margin-left: 250px;
     margin-top: 100px;
     text-align: center;

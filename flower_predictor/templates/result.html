@@ -30,25 +30,19 @@
                 <h3>Poovu</h3>
               </th>
             </tr>
-
+            {% for colour in colours %}
             <tr bgcolor="antiquewhite">
               <td>
-              {% for colour in colours %}
-              <h3>{{colour}}</h3>
-              <!-- <hr color="black" size="0.001"> -->
-              {% endfor %}
+                <h3>{{colour}}</h3>
               </td>
-
               <td>
-              {% for colour in colours %}
               {% for flower in flowers[colour] %}
               <h3>{{flower.name}}</h3>
-              <!-- Flower image -->
-              <!-- <hr color="black" size="0.001"> -->
-              {% endfor %}
               {% endfor %}
               </td>
+              
             </tr>
+            {% endfor %}
           </table>
           
         </div>
